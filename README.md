@@ -2,6 +2,10 @@
 
 Адаптивная концепция магазина запчастей для КАМАЗ по переписке с заказчиком celtik47. Временный бренд «КАМДЕТАЛЬ», русский интерфейс, графитовая палитра с оранжевым акцентом. Данные демонстрационные: 15 товаров, 6 категорий. Архив factdb не использовался.
 
+Онлайн: https://kamdetal-storefront.vercel.app/ · Панель: https://kamdetal-storefront.vercel.app/admin
+
+Код: https://github.com/pyaidev/kamaz. Первая production-версия опубликована через Vercel CLI. Автоматическая связь с GitHub пока не включена: Vercel требует добавить GitHub в Login Connections владельца аккаунта. После подключения можно выполнить `vercel git connect https://github.com/pyaidev/kamaz.git` в папке проекта. Ручное обновление: `vercel deploy --prod`.
+
 ## Запуск
 
 Требуется Node.js 20.19+ или совместимая более новая версия.
