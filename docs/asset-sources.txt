@@ -16,3 +16,17 @@ fuel.jpg https://kam.ru/assets/images/products/14510/small/63490d3f-4bc5-4bae-b3
 dashboard.jpg https://kam.ru/assets/images/products/7559/small/8d64a00a-7434-4b47-8ca9-2c9104cf1c6a.jpg?v=1719228515
 head.jpg https://kam.ru/assets/images/products/2791/small/original_3346_0_d2f5297d-b9cd-11ea-bedc-a4bf01020853-transformed-1.jpg?v=1719228353
 head-alt.jpg https://kam.ru/assets/images/products/2791/small/original_3346_1_d2f52980-b9cd-11ea-bedc-a4bf01020853-transformed-1.jpg?v=1719228353
+reducer-detail.webp https://kamarik.ru/a/kamazona/files/userfiles/images/catalog/95c230cd-8c51-11e6-9077-f46d04426553_3700e927-c845-11e6-b6d7-f46d04426553.webp
+steering-detail.webp https://kamarik.ru/a/kamazona/files/userfiles/images/catalog/506cdc7a-b2d3-11e6-99f2-f46d04426553_b12475ec-34bf-11ed-8372-2c4d54564606.webp
+injector-detail.webp https://kamarik.ru/a/kamazona/files/userfiles/images/catalog/7031acfc-fa7b-11e7-915a-2c4d54564606_7c7f945e-4d0d-11e8-a89e-2c4d54564606.webp
+radiator-detail.webp https://kamarik.ru/a/kamazona/files/userfiles/images/catalog/63e1c34e-e143-11dd-825a-000feaf73fc2_f97785f2-8f47-11e5-89b9-f46d04426553.webp
+transfer-detail.webp https://kamarik.ru/a/kamazona/files/userfiles/images/catalog/5f7d2fde-085b-11eb-ba03-2c4d54564606_bb59fa23-911c-11eb-93e6-2c4d54564606.webp
+fuel-detail.webp https://kamarik.ru/a/kamazona/files/userfiles/images/catalog/87972bf8-1768-11de-b264-000feaf73fc2_6ac0e6cd-b3ba-11e5-89b9-f46d04426553.webp
+dashboard-detail.webp https://kamarik.ru/a/kamazona/files/userfiles/images/catalog/7eaf304f-c145-11df-8b32-00151753da18_2958b452-8791-11e5-89b9-f46d04426553.webp
+head-detail.webp https://kamarik.ru/a/kamazona/files/userfiles/images/catalog/39082022-e143-11dd-825a-000feaf73fc2_c975b6f2-a0e3-11e7-915a-2c4d54564606.webp
+seal-detail.webp https://kamarik.ru/a/kamazona/files/userfiles/images/catalog/7eb43804-e143-11dd-825a-000feaf73fc2_b75541a7-0560-11e6-8e29-f46d04426553.webp
+turbo-detail.webp https://kamarik.ru/a/kamazona/files/userfiles/images/catalog/a50f86ee-cbb6-11e7-915a-2c4d54564606_0daf5534-8f3b-11ee-82d3-50ebf6b29454.webp
+engine-detail.webp https://kamarik.ru/a/kamazona/files/userfiles/images/catalog/ce08b025-16d5-11e3-bad4-f46d04426553_fd482a24-2e05-11e6-9785-f46d04426553.webp
+gearbox-detail.webp https://kamarik.ru/a/kamazona/files/userfiles/images/catalog/fc26022c-62f5-11e1-9185-f46d04426553_56f5b5ea-0e10-11e7-9d64-2c4d54564606.webp
+starter-detail.webp https://kamarik.ru/a/kamazona/files/userfiles/images/catalog/5b52b2a8-e143-11dd-825a-000feaf73fc2_1ecda10a-c8b0-11e5-89b9-f46d04426553.webp
+tank-detail.webp https://kamarik.ru/a/kamazona/files/userfiles/images/catalog/3e010c6e-c835-11e7-915a-2c4d54564606_a607fe96-55b6-11ed-bde8-2c4d54564606.webp

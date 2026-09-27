@@ -1,3 +1,4 @@
+import {productImageUrl} from './image-assets';
 import { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { ArrowUp } from 'lucide-react';
@@ -65,7 +66,7 @@ export function flyToCart(button: HTMLElement, image: string) {
   }
   const fly = document.createElement('div');
   fly.className = 'cart-flying-item';
-  const img = document.createElement('img'); img.src = `/images/${image}`; img.alt = ''; fly.append(img);
+  const img = document.createElement('img'); img.src = productImageUrl(image); img.alt = ''; fly.append(img);
   fly.style.left = `${start.left + start.width / 2 - 26}px`;
   fly.style.top = `${start.top + start.height / 2 - 26}px`;
   document.body.append(fly);

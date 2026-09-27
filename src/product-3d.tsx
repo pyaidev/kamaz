@@ -56,7 +56,7 @@ export default function Product3D({product, model, onClose, returnFocusTo}: {pro
     setStatus('loading');
     setAutoRotate(false);
     spinning.current = false;
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.75));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1;
@@ -95,7 +95,7 @@ export default function Product3D({product, model, onClose, returnFocusTo}: {pro
     pmrem.dispose();
     const light = new THREE.DirectionalLight(0xffffff, 1.8);
     light.position.set(3, 5, 4);
-    scene.add(light, new THREE.HemisphereLight(0xe9f0ff, 0x45413a, .7));
+    scene.add(light, new THREE.HemisphereLight(0xffffff, 0x707070, .7));
 
     const controller = new AbortController();
     let disposed = false;

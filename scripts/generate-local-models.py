@@ -28,7 +28,7 @@ IMAGES = {
 
 
 def cpu_marching_cubes(volume, threshold):
-    vertices, faces, _, _ = marching_cubes(volume.detach().cpu().numpy(), level=threshold)
+    vertices, faces, _, _ = marching_cubes(volume.detach().cpu().numpy(), level=threshold, gradient_direction='ascent')
     # Match torchmcubes' z/y/x output; TripoSR changes it back to x/y/z.
     return torch.from_numpy(vertices[:, ::-1].copy()), torch.from_numpy(faces.copy().astype(np.int64))
 
@@ -38,6 +38,8 @@ def main():
     parser.add_argument('--source', required=True, type=Path)
     parser.add_argument('--resolution', type=int, default=160)
     parser.add_argument('--weights', default='stabilityai/TripoSR')
+    parser.add_argument('--preview-dir', type=Path, help='Write review files here without changing the storefront manifest')
+    parser.add_argument('--force', action='store_true')
     parser.add_argument('--device', choices=['cpu', 'mps', 'cuda'], default=None)
     parser.add_argument('products', nargs='+', choices=list(IMAGES))
     args = parser.parse_args()
@@ -59,14 +61,16 @@ def main():
     background_session = None
     manifest_path = ROOT / 'src/model-manifest.json'
     manifest = json.loads(manifest_path.read_text())
-    output_dir = ROOT / 'public/models'
-    output_dir.mkdir(exist_ok=True)
+    replacements = json.loads((ROOT / 'src/image-assets.json').read_text())
+    output_dir = args.preview_dir or ROOT / 'public/models'
+    output_dir.mkdir(exist_ok=True, parents=True)
     for product_id in args.products:
         destination = output_dir / f'{product_id}.glb'
-        if product_id in manifest and destination.exists():
+        if product_id in manifest and destination.exists() and not args.force:
             print(f'{product_id}: already generated; skipping', flush=True)
             continue
-        image = Image.open(ROOT / 'public/images' / IMAGES[product_id])
+        source_image = replacements.get(IMAGES[product_id], IMAGES[product_id])
+        image = Image.open(ROOT / 'public/images' / source_image)
         print(f'{product_id}: preparing photo', flush=True)
         if image.mode != 'RGBA' or image.getextrema()[3][0] == 255:
             if background_session is None:
@@ -81,6 +85,7 @@ def main():
             codes = model([prepared], device=device)
             print(f'{product_id}: extracting surface', flush=True)
             mesh = model.extract_mesh(codes, True, resolution=args.resolution)[0]
+        mesh.fix_normals(multibody=True)
         # TripoSR uses Z-up; the web viewer uses glTF's Y-up convention.
         mesh.apply_transform(trimesh.transformations.rotation_matrix(-np.pi / 2, [1, 0, 0]))
         # glTF vertex colors are linear; the reconstructed photo colors are sRGB.
@@ -93,9 +98,10 @@ def main():
         manifest[product_id] = {
             'src': f'/models/{product_id}.glb',
             'generator': 'stabilityai/TripoSR',
-            'sourceImage': f'/images/{IMAGES[product_id]}',
+            'sourceImage': f'/images/{source_image}',
         }
-        manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + '\n')
+        if not args.preview_dir:
+            manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + '\n')
         print(f'{product_id}: saved {len(mesh.faces):,} faces / {destination.stat().st_size:,} bytes', flush=True)
         del codes, mesh
         gc.collect()

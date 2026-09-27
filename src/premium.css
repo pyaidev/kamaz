@@ -128,3 +128,8 @@ input,textarea,select{transition:border .2s,box-shadow .2s;background:#fff;borde
 .product-3d-badge{position:absolute;left:14px;bottom:12px;display:flex;align-items:center;gap:5px;padding:5px 8px;background:#263022;color:#eef2e7;border-radius:4px;font-size:9px;letter-spacing:.04em;pointer-events:none}
 @media(max-width:600px){.detail-main-image .open-product-3d{left:14px;right:14px;bottom:14px;width:calc(100% - 28px);padding:12px 14px}.open-product-3d>span{font-size:12px}.open-product-3d>b{font-size:23px}.product-3d-badge{left:10px;bottom:8px;font-size:8px;padding:4px 6px}}
 @media(prefers-reduced-motion:reduce){.detail-main-image .open-product-3d{transition:none}}
+.product-image,.detail-main-image{background:#fff}
+.product-image img,.detail-main-image>img,.category-v2-image>img{mix-blend-mode:normal;filter:none}
+.category-v2-image{background:#fff;border-radius:4px}
+.detail-main-image>img{width:auto;height:auto;max-width:100%;max-height:100%}
+.detail-main-image:hover>img,.product-card:hover .product-image img{transform:none}

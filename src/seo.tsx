@@ -1,3 +1,4 @@
+import {productImageUrl} from './image-assets';
 import {useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 import {useStore} from './store';
@@ -8,7 +9,7 @@ export function Seo(){const location=useLocation();const {products}=useStore();u
  const title=product?`${product.name} — ${product.article}`:category?`${category.name} для КАМАЗ`:titles[location.pathname]||'Заказ запчастей';document.title=`${title} | КАМДЕТАЛЬ`;
  const description=product?`${product.name}, артикул ${product.article}, производитель ${product.brand}. Демонстрационная карточка товара с характеристиками и оформлением заказа.`:`${title}. Поиск запчастей по артикулу, OEM и модели. Демонстрационная версия интернет-магазина КАМДЕТАЛЬ.`;
  document.querySelector('meta[name="description"]')?.setAttribute('content',description);
- const schema=product?{'@context':'https://schema.org','@type':'Product',name:product.name,sku:product.article,mpn:product.oem,image:`${window.location.origin}/images/${product.image}`,description:product.description,brand:{'@type':'Brand',name:product.brand}}:{'@context':'https://schema.org','@type':'WebSite',name:'КАМДЕТАЛЬ — демонстрационная версия',url:window.location.origin};
+ const schema=product?{'@context':'https://schema.org','@type':'Product',name:product.name,sku:product.article,mpn:product.oem,image:`${window.location.origin}${productImageUrl(product.image)}`,description:product.description,brand:{'@type':'Brand',name:product.brand}}:{'@context':'https://schema.org','@type':'WebSite',name:'КАМДЕТАЛЬ — демонстрационная версия',url:window.location.origin};
  const node=document.createElement('script');node.id='page-schema';node.type='application/ld+json';node.textContent=JSON.stringify(schema);document.head.appendChild(node);
  const crumbs=document.createElement('script');crumbs.id='breadcrumb-schema';crumbs.type='application/ld+json';crumbs.textContent=JSON.stringify({'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Главная',item:window.location.origin},...(location.pathname==='/'?[]:[{'@type':'ListItem',position:2,name:title,item:window.location.href}])]});document.head.appendChild(crumbs);
  return()=>{node.remove();crumbs.remove();};
