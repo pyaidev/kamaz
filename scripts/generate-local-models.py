@@ -99,6 +99,7 @@ def main():
             'src': f'/models/{product_id}.glb',
             'generator': 'stabilityai/TripoSR',
             'sourceImage': f'/images/{source_image}',
+            'published': False,
         }
         if not args.preview_dir:
             manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + '\n')

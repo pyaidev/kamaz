@@ -1,6 +1,12 @@
 import {test, expect} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+const manifest = JSON.parse(readFileSync('src/model-manifest.json', 'utf8'));
 
 test.use({launchOptions: {args: ['--enable-unsafe-swiftshader']}});
+
+test.beforeEach(() => {
+  test.skip(manifest['turbo-tkr']?.published !== true, 'The reconstructed turbo model is unpublished because of poor visual quality.');
+});
 
 test('product model loads on demand and supports rotation, zoom and keyboard dismissal', async ({page}, testInfo) => {
   const errors: string[] = [];

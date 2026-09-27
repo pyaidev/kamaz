@@ -2,76 +2,91 @@
   "turbo-tkr": {
     "src": "/models/turbo-tkr.glb",
     "generator": "stabilityai/TripoSR",
-    "sourceImage": "/images/turbo-detail.webp"
+    "sourceImage": "/images/turbo-detail.webp",
+    "published": false
   },
   "starter": {
     "src": "/models/starter.glb",
     "generator": "stabilityai/TripoSR",
-    "sourceImage": "/images/starter-detail.webp"
+    "sourceImage": "/images/starter-detail.webp",
+    "published": false
   },
   "cylinder-head": {
     "src": "/models/cylinder-head.glb",
     "generator": "stabilityai/TripoSR",
-    "sourceImage": "/images/head-detail.webp"
+    "sourceImage": "/images/head-detail.webp",
+    "published": false
   },
   "radiator": {
     "src": "/models/radiator.glb",
     "generator": "stabilityai/TripoSR",
-    "sourceImage": "/images/radiator-detail.webp"
+    "sourceImage": "/images/radiator-detail.webp",
+    "published": false
   },
   "injector": {
     "src": "/models/injector.glb",
     "generator": "stabilityai/TripoSR",
-    "sourceImage": "/images/injector-detail.webp"
+    "sourceImage": "/images/injector-detail.webp",
+    "published": false
   },
   "gearbox": {
     "src": "/models/gearbox.glb",
     "generator": "stabilityai/TripoSR",
-    "sourceImage": "/images/gearbox-detail.webp"
+    "sourceImage": "/images/gearbox-detail.webp",
+    "published": false
   },
   "steering": {
     "src": "/models/steering.glb",
     "generator": "stabilityai/TripoSR",
-    "sourceImage": "/images/steering-detail.webp"
+    "sourceImage": "/images/steering-detail.webp",
+    "published": false
   },
   "engine": {
     "src": "/models/engine.glb",
     "generator": "stabilityai/TripoSR",
-    "sourceImage": "/images/engine-detail.webp"
+    "sourceImage": "/images/engine-detail.webp",
+    "published": false
   },
   "reducer": {
     "src": "/models/reducer.glb",
     "generator": "stabilityai/TripoSR",
-    "sourceImage": "/images/reducer-detail.webp"
+    "sourceImage": "/images/reducer-detail.webp",
+    "published": false
   },
   "transfer": {
     "src": "/models/transfer.glb",
     "generator": "stabilityai/TripoSR",
-    "sourceImage": "/images/transfer-detail.webp"
+    "sourceImage": "/images/transfer-detail.webp",
+    "published": false
   },
   "seal": {
     "src": "/models/seal.glb",
     "generator": "stabilityai/TripoSR",
-    "sourceImage": "/images/seal-detail.webp"
+    "sourceImage": "/images/seal-detail.webp",
+    "published": false
   },
   "dashboard": {
     "src": "/models/dashboard.glb",
     "generator": "stabilityai/TripoSR",
-    "sourceImage": "/images/dashboard-detail.webp"
+    "sourceImage": "/images/dashboard-detail.webp",
+    "published": false
   },
   "hood": {
     "src": "/models/hood.glb",
     "generator": "stabilityai/TripoSR",
-    "sourceImage": "/images/hood.jpg"
+    "sourceImage": "/images/hood.jpg",
+    "published": false
   },
   "tank": {
     "src": "/models/tank.glb",
     "generator": "stabilityai/TripoSR",
-    "sourceImage": "/images/tank-detail.webp"
+    "sourceImage": "/images/tank-detail.webp",
+    "published": false
   },
   "fuel-sensor": {
     "src": "/models/fuel-sensor.glb",
     "generator": "stabilityai/TripoSR",
-    "sourceImage": "/images/fuel-detail.webp"
+    "sourceImage": "/images/fuel-detail.webp",
+    "published": false
   }
 }
