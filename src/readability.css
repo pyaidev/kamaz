@@ -1,0 +1,25 @@
+/* Compact commerce layouts still need legible labels and reachable controls. */
+.hero p{font-size:14px;line-height:1.75;max-width:335px}
+.category-card h3{font-size:13px}.category-caption{font-size:10px}
+.product-name{font-size:13px;min-height:42px}.product-meta{font-size:9px}.stock{font-size:10px}
+.catalog-products .product-name{font-size:12px}.catalog-products .product-meta{font-size:9px}
+.catalog-disclaimer{font-size:10px;color:#727969}
+.help-copy p{font-size:13px}.steps-grid p{font-size:12px}.steps-grid h3{font-size:14px}
+.footer-main>div>a:not(.logo){font-size:11px}.footer p{font-size:11px}
+.product-meta,.category-caption{color:#737b6b}.product-meta>span:first-child{color:#68735d}
+@media(max-width:1199px){.category-card h3{font-size:12px}.category-caption{font-size:9px}.product-meta{font-size:8px}.catalog-products .product-meta{font-size:8px}.hero p{font-size:13px;max-width:300px}}
+@media(max-width:699px){
+ .hero p{font-size:12px;max-width:250px}.hero .btn{font-size:12px;min-height:46px}
+ .header-action{min-width:30px;min-height:32px;justify-content:center}
+ .category-card h3{font-size:12px}.category-caption{font-size:10px;line-height:1.65;max-width:120px}.category-card{min-height:220px}
+ .product-name,.catalog-products .product-name{font-size:12px;min-height:58px;line-height:1.6}
+ .product-meta,.catalog-products .product-meta{font-size:8px;min-height:24px;align-content:flex-start}
+ .stock{font-size:9px}.favorite-btn{height:34px;width:34px;top:3px;right:3px}.favorite-btn>svg{width:18px}
+ .add-btn{width:38px;height:38px}.product-bottom>strong,.catalog-products .product-bottom>strong{font-size:17px}
+ .help-copy p{font-size:12px}.help-copy .btn{font-size:11px;min-height:44px}
+ .steps-grid h3{font-size:13px}.steps-grid p{font-size:11px}.catalog-disclaimer{font-size:9px}
+ .footer h4{font-size:12px}.footer-main>div>a:not(.logo){font-size:11px;padding:2px 0}
+ .footer-help>button{min-height:35px}.mobile-nav span{font-size:10px}
+ .list-view .product-name,.list-view .product-meta{min-height:0}
+}
+@media(max-width:374px){.category-card h3{font-size:11px}.category-caption{font-size:9px}.product-name,.catalog-products .product-name{font-size:11px}.product-bottom>strong,.catalog-products .product-bottom>strong{font-size:15px}.add-btn{width:34px;height:36px}}
