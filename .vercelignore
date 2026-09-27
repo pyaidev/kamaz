@@ -2,6 +2,7 @@ node_modules
 dist
 docs
 tests
+scripts
 test-results
 playwright-report
 *.tsbuildinfo

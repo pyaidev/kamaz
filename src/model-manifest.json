@@ -1,0 +1,77 @@
+{
+  "turbo-tkr": {
+    "src": "/models/turbo-tkr.glb",
+    "generator": "stabilityai/TripoSR",
+    "sourceImage": "/images/turbo.png"
+  },
+  "starter": {
+    "src": "/models/starter.glb",
+    "generator": "stabilityai/TripoSR",
+    "sourceImage": "/images/starter.png"
+  },
+  "cylinder-head": {
+    "src": "/models/cylinder-head.glb",
+    "generator": "stabilityai/TripoSR",
+    "sourceImage": "/images/head.jpg"
+  },
+  "radiator": {
+    "src": "/models/radiator.glb",
+    "generator": "stabilityai/TripoSR",
+    "sourceImage": "/images/radiator.png"
+  },
+  "injector": {
+    "src": "/models/injector.glb",
+    "generator": "stabilityai/TripoSR",
+    "sourceImage": "/images/injector.jpg"
+  },
+  "gearbox": {
+    "src": "/models/gearbox.glb",
+    "generator": "stabilityai/TripoSR",
+    "sourceImage": "/images/gearbox.png"
+  },
+  "steering": {
+    "src": "/models/steering.glb",
+    "generator": "stabilityai/TripoSR",
+    "sourceImage": "/images/steering.jpg"
+  },
+  "engine": {
+    "src": "/models/engine.glb",
+    "generator": "stabilityai/TripoSR",
+    "sourceImage": "/images/engine.png"
+  },
+  "reducer": {
+    "src": "/models/reducer.glb",
+    "generator": "stabilityai/TripoSR",
+    "sourceImage": "/images/reducer.png"
+  },
+  "transfer": {
+    "src": "/models/transfer.glb",
+    "generator": "stabilityai/TripoSR",
+    "sourceImage": "/images/transfer.png"
+  },
+  "seal": {
+    "src": "/models/seal.glb",
+    "generator": "stabilityai/TripoSR",
+    "sourceImage": "/images/seal.jpg"
+  },
+  "dashboard": {
+    "src": "/models/dashboard.glb",
+    "generator": "stabilityai/TripoSR",
+    "sourceImage": "/images/dashboard.jpg"
+  },
+  "hood": {
+    "src": "/models/hood.glb",
+    "generator": "stabilityai/TripoSR",
+    "sourceImage": "/images/hood.jpg"
+  },
+  "tank": {
+    "src": "/models/tank.glb",
+    "generator": "stabilityai/TripoSR",
+    "sourceImage": "/images/tank.jpg"
+  },
+  "fuel-sensor": {
+    "src": "/models/fuel-sensor.glb",
+    "generator": "stabilityai/TripoSR",
+    "sourceImage": "/images/fuel.jpg"
+  }
+}
