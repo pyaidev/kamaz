@@ -4,7 +4,7 @@ test('all key pages render without overflow or runtime errors',async({page},test
  for(const path of ['/','/catalog','/product/cylinder-head','/cart','/account','/favorites','/delivery','/guarantee','/about','/contacts','/privacy','/admin']){
   await page.goto(path);await expect(page.locator('main h1').first()).toBeVisible();
   await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1)).toBe(true);
-  if(path==='/'){await page.evaluate(()=>document.fonts.ready);await page.screenshot({path:`docs/home-${testInfo.project.name}.png`,fullPage:true});}
+  if(path==='/'){await page.evaluate(()=>document.fonts.ready);await page.locator('.hero').evaluate(el=>Promise.all(el.getAnimations({subtree:true}).filter(a=>a.effect?.getTiming().iterations!==Infinity).map(a=>a.finished)));await page.screenshot({path:`docs/home-${testInfo.project.name}.png`,fullPage:true});}
  }
  expect(errors).toEqual([]);
 });
